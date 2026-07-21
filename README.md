@@ -156,18 +156,17 @@ Build Date:    July 3-4, 2026
 
 | Server | Purpose |
 |---|---|
-| `re-agent-mcp-server.py` | auto-re-agent integration with OpenCode GO |
-| `ue5-pak-mcp-server.py` | UE5 PAK file exploration (file listing) |
-| `gzw-pak-mcp-server.py` | GZW-specific PAK data queries |
+| `tools/re-agent-mcp-server.py` | auto-re-agent integration with OpenCode GO |
+| `tools/ue5-pak-mcp-server.py` | UE5 PAK file exploration (file listing) |
 
 ### Custom Scripts
 
 | Script | Location |
 |---|---|
-| `code_analysis/extract_strings.py` | Extract all strings from binaries |
-| `pak_data/read_utoc.py` | Parse UE5 UTOC format |
-| `pak_data/parse_utoc.py` | Advanced UTOC parsing |
-| `pak_data/find_aes_key.py` | Search for AES encryption keys |
+| `tools/extract_strings.py` | Extract all strings from binaries |
+| `tools/read_utoc.py` | Parse UE5 UTOC format |
+| `tools/parse_utoc.py` | Advanced UTOC parsing |
+| `tools/find_aes_key.py` | Search for AES encryption keys |
 
 ---
 
