@@ -1,0 +1,18 @@
+{
+  "description": "DataTable assets found in GZW PAK files",
+  "source": "UTOC string analysis (GZW-WindowsClient.utoc)",
+  "count": 35,
+  "datatables": [
+    "DT_AIRoleOverride.uasset",
+    "DT_AIRoles.uasset",
+    "DT_AdditionalGameplayTags.uasset",
+    "DT_ApplyItemInteraction_GameplayTags.uasset",
+    "DT_BodyTypeTags.uasset",
+    "DT_CountryOrigins.uasset",
+    "DT_FTUEQuestTags.uasset",
+    "DT_FactionCamps.uasset",
+    "DT_Factions.uasset",
+    "DT_FieldManual_GameplayTags.uasset"
+  ],
+  "notes": "These DataTables contain structured game data (faction stats, AI behavior, item properties, etc.). Extractable via FModel if it gains GZW support."
+}

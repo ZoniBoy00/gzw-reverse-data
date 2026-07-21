@@ -21,34 +21,32 @@ This repository contains data extracted from the Gray Zone Warfare game client (
 
 ```
 GrayZoneWarfare/
-├── README.md                    ← This file
-├── data/                        ← Clean organized data (English)
-│   ├── nakama_rpcs/             ← Nakama backend RPC errors and codes
-│   │   └── nakama_errors.json
-│   ├── endpoints/               ← Server modules and operations
-│   │   └── server_modules.json
-│   ├── game_assets/             ← Game asset categories
-│   │   ├── datatables.json      ← 35 DataTable assets
-│   │   ├── weapons.json         ← Weapon and attachment references
-│   │   ├── armor.json           ← Armor/vest/helmet references
-│   │   ├── ammo.json            ← Ammo caliber references
-│   │   ├── medical.json         ← Medical item references
-│   │   ├── keys.json            ← Key/keycard references
-│   │   ├── quests.json          ← Quest/task references
-│   │   └── factions.json        ← Faction references
-│   └── config/                  ← Game configuration
-│       └── game_settings.json
-├── code_analysis/               ← Raw extraction data (JSON)
-│   ├── strings/                 ← All extracted strings per binary
-│   ├── extract_strings.py       ← Extraction tool
-│   └── summary.md               ← Technical summary
-├── pak_data/                    ← PAK/UTOC analysis
-│   ├── exports/                 ← UTOC parsing results
-│   ├── find_aes_key.py          ← AES key search (none found - no encryption)
-│   └── read_utoc.py            ← UTOC format parser
-├── configs/                     ← Config files from game
-└── reports/                     ← Analysis reports
-    └── SUMMARY.md               ← Full technical report
+├── README.md                        ← This file
+├── data/                            ← Clean organized data
+│   ├── nakama_rpcs/nakama_errors.json    ← 115 Nakama backend RPCs
+│   ├── endpoints/server_modules.json     ← 10 server modules
+│   ├── config/game_settings.json         ← Game configuration
+│   └── game_assets/                      ← Asset reference indexes
+│       ├── weapons.json                  ← 4,776 weapon references
+│       ├── ammo.json                     ← 1,844 ammo references
+│       ├── armor.json                    ← 1,287 armor references
+│       ├── medical.json                  ← 1,298 medical references
+│       ├── keys.json                     ← 503 key references
+│       ├── quests.json                   ← 1,781 quest references
+│       ├── factions.json                 ← 1,603 faction references
+│       └── datatables.json               ← 35 DataTable assets
+├── code_analysis/strings/           ← Raw extracted strings per binary
+├── pak_data/                        ← PAK/UTOC analysis
+│   └── exports/                     ← UTOC parsing results (AES key search, file listings)
+├── tools/                           ← Analysis and extraction tools
+│   ├── re-agent-mcp-server.py       ← MCP server for auto-re-agent
+│   ├── ue5-pak-mcp-server.py        ← MCP server for UE5 PAK exploration
+│   ├── extract_strings.py           ← Extract all strings from binaries
+│   ├── read_utoc.py                 ← Parse UE5 UTOC format
+│   ├── parse_utoc.py                ← Advanced UTOC parsing
+│   └── find_aes_key.py              ← Search for AES encryption keys
+└── reports/
+    └── SUMMARY.md                   ← Full technical report
 ```
 
 ---
@@ -181,8 +179,6 @@ These require either FModel working with GZW's custom UE5 format or memory readi
 - **Quest requirements & rewards** (numerical values)
 - **Skill progression** (XP curves, skill effects)
 - **Health/medical values** (bleed rates, healing amounts)
-
-FModel 4.4.4.0 and dec-2025 are available in the `tools/` directory if future updates add GZW support.
 
 ---
 
