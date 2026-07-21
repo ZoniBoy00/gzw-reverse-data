@@ -1,0 +1,153 @@
+{
+  "description": "Server-side modules and endpoints identified from source paths and executable strings",
+  "game": "Gray Zone Warfare",
+  "developer": "Madfinger Games",
+  "source": "GZWClientSteam-Win64-Shipping.exe strings + source code paths",
+  "modules": [
+    {
+      "name": "MFGCustomPlayerPersistenceService",
+      "path": "MadfingerCoreOnline/.../CustomServer/MFGCustomPlayerPersistenceService.cpp",
+      "description": "Player data persistence for custom servers"
+    },
+    {
+      "name": "MFGInfoServer",
+      "path": "MadfingerCoreServerInfo/.../MFGInfoServer.cpp",
+      "description": "Server information provider"
+    },
+    {
+      "name": "MFGGameInfoServer",
+      "path": "MadfingerGame/.../MFGGameInfoServer.cpp",
+      "description": "Game server information"
+    },
+    {
+      "name": "MFGCustomServerClientSubsystem",
+      "path": "MadfingerGame/.../MFGCustomServerClientSubsystem.cpp",
+      "description": "Custom server client communication"
+    },
+    {
+      "name": "MFGMatchmakerServerSubsystem",
+      "path": "MadfingerGame/.../MFGMatchmakerServerSubsystem.cpp",
+      "description": "Matchmaking server logic"
+    },
+    {
+      "name": "MFGModerationServerSubsystem",
+      "path": "MadfingerGame/.../MFGModerationServerSubsystem.cpp",
+      "description": "Moderation (kick/ban) system"
+    },
+    {
+      "name": "MFGNotificationsServerSubsystem",
+      "path": "MadfingerGame/.../MFGNotificationsServerSubsystem.cpp",
+      "description": "Server notification system"
+    },
+    {
+      "name": "MFGSquadServerSubsystem",
+      "path": "MadfingerGame/.../MFGSquadServerSubsystem.cpp",
+      "description": "Squad management"
+    },
+    {
+      "name": "MFGErrorHandlingServerSubsystem",
+      "path": "MadfingerGame/.../MFGErrorHandlingServerSubsystem.cpp",
+      "description": "Server-side error handling"
+    },
+    {
+      "name": "MFGCustomServerPanel",
+      "path": "MadfingerGame/.../MFGCustomServerPanel.cpp",
+      "description": "Custom server UI panel"
+    }
+  ],
+  "server_operations": {
+    "custom_servers": [
+      "MFGCreateCustomServerRequest",
+      "MFGUpdateCustomServerRequest",
+      "MFGListCustomServerConfigsResponse",
+      "MFGGetStatusCustomServerRequest",
+      "MFGGetStatusCustomServerResponse",
+      "MFGCustomServerCustomNameRequest",
+      "MFGCustomServerPasswordResponse",
+      "MFGChangeOwnersCustomServerRequest",
+      "MFGPromoteMemberServerRequest",
+      "MFGCustomServerEmptyRequest",
+      "MFGServerInfoRequest",
+      "MFGServerSquadData",
+      "MFGServerMaintenanceMode"
+    ],
+    "items": [
+      "Server_ItemRequestOperation",
+      "Server_ItemSortingRequestOperation",
+      "AMFGPlayerController::Server_StorageRequestOperation_Implementation"
+    ],
+    "quests": [
+      "Server_AddQuestToPlayerMap",
+      "Server_RemoveQuestFromPlayerMap"
+    ],
+    "player": [
+      "Server_SetProfileUpdateAtDateTime",
+      "Server_SetTweakProfile",
+      "AMFGPlayerController::Server_SetRespawningInNearestCOP_Implementation"
+    ],
+    "modding": [
+      "AMFGPlayerController::Server_ModdingRequestOperation_Implementation"
+    ]
+  },
+  "server_states": {
+    "custom_server": [
+      "EMFGCustomServerState::NotRunning",
+      "EMFGCustomServerState::Starting",
+      "EMFGCustomServerState::Running",
+      "EMFGCustomServerState::Terminating",
+      "EMFGCustomServerState::Invalid",
+      "EMFGCustomServerState::Unknown"
+    ],
+    "panel": [
+      "EMFGCustomServerPanelState::Idle",
+      "EMFGCustomServerPanelState::QueryingServer",
+      "EMFGCustomServerPanelState::ConnectedToServer",
+      "EMFGCustomServerPanelState::ServerStarting",
+      "EMFGCustomServerPanelState::ServerRunning",
+      "EMFGCustomServerPanelState::ServerShuttingdown"
+    ],
+    "types": [
+      "EMFGNakamaServerTypes::Development",
+      "EMFGNakamaServerTypes::Experimental",
+      "EMFGNakamaServerTypes::Production"
+    ]
+  },
+  "hit_validation": {
+    "description": "Server-side hit validation codes (anti-cheat)",
+    "results": [
+      "EMFGServerHitValidationResult::Hit",
+      "EMFGServerHitValidationResult::DOS",
+      "EMFGServerHitValidationResult::Invalid",
+      "EMFGServerHitValidationResult::NotExist",
+      "EMFGServerHitValidationResult::Wait"
+    ]
+  },
+  "errors": {
+    "connection": [
+      "EMFGErrors::ConnectingToServerFailed",
+      "EMFGErrors::ServerDisconnected",
+      "EMFGErrors::ServerFull",
+      "EMFGErrors::ServerLoginTimeout",
+      "EMFGErrors::ServerSteamAuthFailed",
+      "EMFGErrors::ServerVerificationFailed",
+      "EMFGErrors::ServerDatabaseFailed"
+    ],
+    "kick_reasons": [
+      "EMFGErrors::KickedByAdminOfCustomServer",
+      "EMFGErrors::KickedByRestartingCustomServer",
+      "EMFGErrors::KickedByServer",
+      "EMFGErrors::KickedByServerRpcViolation",
+      "EMFGErrors::KickedByShuttingDownCustomServer",
+      "EMFGErrors::KickedByAdminOfCustomServer"
+    ],
+    "eac": [
+      "EMFGErrors::EAC_ServerRegistrationFailed",
+      "EMFGErrors::EAC_ServerRegistrationTimeout",
+      "EMFGAutomaticReportCategory::EAC_ServerRegistrationTimeout"
+    ],
+    "quest": [
+      "EMFGQuestFailureReason::LeftServer",
+      "EMFGQuestFailureReason::LeftServerInComa"
+    ]
+  }
+}

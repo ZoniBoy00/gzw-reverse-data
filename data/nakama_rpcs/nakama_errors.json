@@ -1,0 +1,146 @@
+{
+  "description": "Nakama RPC error codes extracted from GZWClientSteam-Win64-Shipping.exe",
+  "game": "Gray Zone Warfare",
+  "developer": "Madfinger Games",
+  "source": "MFGNakama error codes from executable strings",
+  "extracted": "2026-07-21",
+  "categories": {
+    "character_creation": {
+      "description": "Character creation and wipe system",
+      "codes": [
+        "MFGNakama.NewCharNotWiped",
+        "MFGNakama.NewCharFaction",
+        "MFGNakama.NewCharUsername",
+        "MFGNakama.NewCharApparel",
+        "MFGNakama.WipeCharTooEarly",
+        "MFGNakama.WipeInternalError"
+      ]
+    },
+    "name_validation": {
+      "description": "Username validation rules",
+      "codes": [
+        "MFGNakama.ValidNameAlreadyExist",
+        "MFGNakama.ValidNameProfanity",
+        "MFGNakama.ValidNameTooShort",
+        "MFGNakama.ValidNameTooLong",
+        "MFGNakama.ValidNameSpecialCharacters"
+      ]
+    },
+    "squad": {
+      "description": "Squad/group management",
+      "codes": [
+        "MFGNakama.SquadNotFound",
+        "MFGNakama.SquadFullSlots",
+        "MFGNakama.SquadSavingFailed",
+        "MFGNakama.SquadIncompatibleData",
+        "MFGNakama.SquadUserBlockage"
+      ]
+    },
+    "custom_servers": {
+      "description": "Custom server management",
+      "codes": [
+        "MFGNakama.CustomServerRegionCodeNotFound",
+        "MFGNakama.CustomServerRegionCodeNotAllowed"
+      ]
+    },
+    "steam": {
+      "description": "Steam integration",
+      "codes": [
+        "MFGNakama.SteamFriendsLoadUnauthorized",
+        "MFGNakama.SteamFriendsLoadUnknown",
+        "MFGNakama.SteamFriendsChangeUnauthorized",
+        "MFGNakama.SteamUnauthorized"
+      ]
+    },
+    "general": {
+      "description": "General backend errors",
+      "codes": [
+        "MFGNakama.InternalError",
+        "MFGNakama.NotFound",
+        "MFGNakama.UserNotFound",
+        "MFGNakama.MissingUserId",
+        "MFGNakama.MissingSessionId",
+        "MFGNakama.Banned",
+        "MFGNakama.MaintenanceMode",
+        "MFGNakama.OutdatedClient",
+        "MFGNakama.UserIsOnline",
+        "MFGNakama.NotSupporterOwner",
+        "MFGNakama.OfflineService",
+        "MFGNakama.NoNakama",
+        "MFGNakama.NotSupportedIP",
+        "MFGNakama.OnlyServerApi",
+        "MFGNakama.ConversionError",
+        "MFGNakama.SQLError",
+        "MFGNakama.IncompatibleDataWithUE",
+        "MFGNakama.PermissionDenied",
+        "MFGNakama.Unauthenticated",
+        "MFGNakama.Unavailable"
+      ]
+    },
+    "realtime": {
+      "description": "Real-time socket errors",
+      "codes": [
+        "MFGNakama.RtUnknown",
+        "MFGNakama.RtConnectionError",
+        "MFGNakama.RtTransportError",
+        "MFGNakama.RtDisconnected",
+        "MFGNakama.RtException",
+        "MFGNakama.RtUnrecognizedPayload",
+        "MFGNakama.RtMissingPayload",
+        "MFGNakama.RtBadInput",
+        "MFGNakama.RtMatchNotFound",
+        "MFGNakama.RtMatchJoinRejected",
+        "MFGNakama.RtFunctionNotFound",
+        "MFGNakama.RtFunctionException"
+      ]
+    },
+    "enums": {
+      "description": "Error code enums",
+      "codes": [
+        "ENakamaErrorCode::Ok",
+        "ENakamaErrorCode::Cancelled",
+        "ENakamaErrorCode::Unknown",
+        "ENakamaErrorCode::InvalidArgument",
+        "ENakamaErrorCode::DeadlineExceeded",
+        "ENakamaErrorCode::NotFound",
+        "ENakamaErrorCode::AlreadyExists",
+        "ENakamaErrorCode::PermissionDenied",
+        "ENakamaErrorCode::ResourceExhausted",
+        "ENakamaErrorCode::FailedPrecondition",
+        "ENakamaErrorCode::Aborted",
+        "ENakamaErrorCode::OutOfRange",
+        "ENakamaErrorCode::Unimplemented",
+        "ENakamaErrorCode::Internal",
+        "ENakamaErrorCode::Unavailable",
+        "ENakamaErrorCode::DataLoss",
+        "ENakamaErrorCode::Unauthenticated",
+        "ENakamaRtErrorCode::UNKNOWN",
+        "ENakamaRtErrorCode::CONNECT_ERROR",
+        "ENakamaRtErrorCode::TRANSPORT_ERROR",
+        "ENakamaRtErrorCode::DISCONNECTED",
+        "ENakamaRtErrorCode::RUNTIME_EXCEPTION",
+        "ENakamaRtErrorCode::RUNTIME_FUNCTION_NOT_FOUND",
+        "ENakamaRtErrorCode::UNRECOGNIZED_PAYLOAD",
+        "ENakamaRtErrorCode::MISSING_PAYLOAD",
+        "ENakamaRtErrorCode::BAD_INPUT",
+        "ENakamaRtErrorCode::MATCH_NOT_FOUND",
+        "ENakamaRtErrorCode::MATCH_JOIN_REJECTED",
+        "ENakamaRtErrorCode::RUNTIME_FUNCTION_EXCEPTION"
+      ]
+    },
+    "mfgerrors": {
+      "description": "Madfinger Game-specific error codes",
+      "codes": [
+        "EMFGErrors::NakamaAuthorizationFailed",
+        "EMFGErrors::NakamaBanned",
+        "EMFGErrors::NakamaDatabaseFailed",
+        "EMFGErrors::NakamaIncompatible",
+        "EMFGErrors::NakamaIncompatibleNewer",
+        "EMFGErrors::NakamaIncompatibleOlder",
+        "EMFGErrors::NakamaNotSupporter",
+        "EMFGErrors::ServerNakamaProfileLoadFailed"
+      ]
+    }
+  },
+  "notes": "These errors reveal the complete backend architecture: character creation, naming rules, squads, custom servers, Steam integration, and real-time matchmaking. All validated against Nakama v3.x SDK patterns."
+}

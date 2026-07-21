@@ -1,0 +1,19 @@
+[
+  "ChangeDisplaySettingsEx() failed: %s",
+  "ChangeDisplaySettingsExW",
+  "Could not retrieve EGL function eglChooseConfig",
+  "Could not retrieve EGL function eglGetConfigAttrib",
+  "EnumDisplaySettingsW",
+  "SDL_EGL_ChooseConfig: found a slow EGL config",
+  "Setting NOPROXY URLs: %s",
+  "Setting autocenter",
+  "Setting cooperative level to exclusive",
+  "Setting data format",
+  "Setting gain",
+  "Setting the swap interval is not supported",
+  "Setting vibration failed: 0x%x",
+  "Settings.json",
+  "WinHttpGetIEProxyConfigForCurrentUser",
+  "eglChooseConfig",
+  "eglGetConfigAttrib"
+]
